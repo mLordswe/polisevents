@@ -19,24 +19,26 @@ searchButton?.setAttribute("button", "submit");
 searchButton?.setAttribute("id", "formbutton");
 searchButton.innerHTML = "Sök";
 
-newForm?.addEventListener("submit", (e) => {
+newForm?.addEventListener("submit", async (e) => {
   e.preventDefault();
   const searchValue: any = searchField.value;
-  getData(searchValue);
-  makeCards(searchValue);
+  const data = await getData(searchValue);
+  makeCards(data);
 });
 
 function makeCards(arrayToRender: ApiResponse[]) {
   for (const key of arrayToRender) {
-    // create article containing monster card
+    // create article containing event card
+    if (key.name && key.summary) {
+      const eventCard: HTMLElement = document.createElement(
+        "article"
+      ) as HTMLElement;
 
-    const monsterCard: HTMLElement = document.createElement(
-      "article"
-    ) as HTMLElement;
-    monsterCard.className = "monster-card";
-    main.appendChild(monsterCard);
-    monsterCard.innerHTML = `${key.name}
-                             ${key.datetime}
-                             ${key.summary}   `;
+      eventCard.className = "event-card";
+      main.appendChild(eventCard);
+      eventCard.innerHTML = `${key.name}:  ${key.summary}`;
+    } else {
+      console.log("ogiltig data", key);
+    }
   }
 }
