@@ -1,5 +1,6 @@
 import { getData } from "./main";
 import { ApiResponse } from "./types";
+import { initMap } from "./map";
 //=============HTML===============================
 //Create form and searchbutton
 const body = document.querySelector("body");
@@ -44,8 +45,11 @@ function makeCards(arrayToRender: ApiResponse[]) {
       eventCard.innerHTML = eventCard.innerHTML =
         `${key.name}: ${key.summary} ` +
         `<a href="https://www.polisen.se${key.url}" target="_blank">Läs mer</a>`;
+        key.location.gps.
     } else {
       console.log("ogiltig data", key);
     }
   }
 }
+
+initMap(57.721035, 12.939819);
