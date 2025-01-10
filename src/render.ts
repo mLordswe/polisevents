@@ -1,10 +1,13 @@
 import { getData } from "./main";
 import { ApiResponse } from "./types";
+//=============HTML===============================
+//Create form and searchbutton
 const body = document.querySelector("body");
 let main: HTMLElement = body?.appendChild(
   document.createElement("main")
 ) as HTMLElement;
 main.setAttribute("id", "main");
+main.style.display = "none";
 const newForm = body?.appendChild(document.createElement("form"));
 newForm?.setAttribute("id", "newForm");
 
@@ -18,14 +21,15 @@ const searchButton: HTMLButtonElement = newForm?.appendChild(
 searchButton?.setAttribute("button", "submit");
 searchButton?.setAttribute("id", "formbutton");
 searchButton.innerHTML = "Sök";
-
+//listener for searchbutton and renders cards with information
 newForm?.addEventListener("submit", async (e) => {
   e.preventDefault();
   const searchValue: any = searchField.value;
   const data = await getData(searchValue);
   makeCards(data);
+  main.style.display = "inline-block";
 });
-
+//==================Functions========================
 function makeCards(arrayToRender: ApiResponse[]) {
   for (const key of arrayToRender) {
     // create article containing event card
@@ -35,8 +39,11 @@ function makeCards(arrayToRender: ApiResponse[]) {
       ) as HTMLElement;
 
       eventCard.className = "event-card";
+
       main.appendChild(eventCard);
-      eventCard.innerHTML = `${key.name}:  ${key.summary}`;
+      eventCard.innerHTML = eventCard.innerHTML =
+        `${key.name}: ${key.summary} ` +
+        `<a href="https://www.polisen.se${key.url}" target="_blank">Läs mer</a>`;
     } else {
       console.log("ogiltig data", key);
     }

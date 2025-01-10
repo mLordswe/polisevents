@@ -1,0 +1,9 @@
+Strunta i kategorier förtillfället. återvänder till det senare
+
+Fixa googlemaps api nyckel och kolla på hur jag kan implementera den med kordinater ifrån api:n 
+
+göra filter för tid? 
+
+
+
+
