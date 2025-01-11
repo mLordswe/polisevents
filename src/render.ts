@@ -1,6 +1,7 @@
 import { getData } from "./main";
 import { ApiResponse } from "./types";
-import { initMap } from "./map";
+
+import { getMapLocation } from "./main";
 //=============HTML===============================
 //Create form and searchbutton
 const body = document.querySelector("body");
@@ -29,6 +30,7 @@ newForm?.addEventListener("submit", async (e) => {
   const data = await getData(searchValue);
   makeCards(data);
   main.style.display = "inline-block";
+  getMapLocation(data);
 });
 //==================Functions========================
 function makeCards(arrayToRender: ApiResponse[]) {
@@ -45,11 +47,8 @@ function makeCards(arrayToRender: ApiResponse[]) {
       eventCard.innerHTML = eventCard.innerHTML =
         `${key.name}: ${key.summary} ` +
         `<a href="https://www.polisen.se${key.url}" target="_blank">Läs mer</a>`;
-        key.location.gps.
     } else {
       console.log("ogiltig data", key);
     }
   }
 }
-
-initMap(57.721035, 12.939819);

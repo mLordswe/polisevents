@@ -11,13 +11,17 @@ loader.load().then(async () => {
     "maps"
   )) as google.maps.MapsLibrary;
   map = new Map(document.getElementById("map") as HTMLElement, {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
+    center: { lat: 60.7419, lng: 15.0181 },
+    zoom: 4,
   });
 });
 // Initialize and add the map
 let map;
-export async function initMap(x: number, y: number): Promise<void> {
+export async function initMap(
+  x: number,
+  y: number,
+  name: string
+): Promise<void> {
   // The location of Uluru
   const position = { lat: x, lng: y };
 
@@ -30,17 +34,17 @@ export async function initMap(x: number, y: number): Promise<void> {
     "marker"
   )) as google.maps.MarkerLibrary;
 
-  // The map, centered at Uluru
+  // The map, centered at sweden
   map = new Map(document.getElementById("map") as HTMLElement, {
     zoom: 4,
     center: position,
     mapId: "DEMO_MAP_ID",
   });
 
-  // The marker, positioned at Uluru
+  //
   const marker = new AdvancedMarkerElement({
     map: map,
     position: position,
-    title: "Uluru",
+    title: `${name}`,
   });
 }
