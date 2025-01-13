@@ -6,6 +6,7 @@ import { getMapLocation } from "./main";
 // Fixa error hantering för felaktig input eller inputvärde som inte existerar i apin
 //Fixa fel i koden där cardsen inte uppdateras vid ny sökning ✅
 //Göra så att man kan Pin'a städer/brott för att se
+//eventuellt lägga in en border runt staden man sökt på
 //=============HTML===============================
 //Create form and searchbutton
 const body = document.querySelector("body");
