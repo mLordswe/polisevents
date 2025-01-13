@@ -17,8 +17,8 @@ Kopiera kod
 cd polisevents
 Installera alla nödvändiga dependancies:
 
-Kopiera kod
 npm install
+
 Användning
 Öppna projektet i en webbläsare.
 Använd sökfältet för att skriva in namnet på den stad du vill se brottshistorik för.
