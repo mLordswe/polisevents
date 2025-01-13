@@ -2,6 +2,10 @@ import { getData } from "./main";
 import { ApiResponse } from "./types";
 
 import { getMapLocation } from "./main";
+//=============TO DO =============================
+// Fixa error hantering för felaktig input eller inputvärde som inte existerar i apin
+//Fixa fel i koden där cardsen inte uppdateras vid ny sökning
+//Göra så att man kan Pin'a städer/brott för att se senaste inom dem
 //=============HTML===============================
 //Create form and searchbutton
 const body = document.querySelector("body");
@@ -26,7 +30,7 @@ searchButton.innerHTML = "Sök";
 //listener for searchbutton and renders cards with information
 newForm?.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const searchValue: any = searchField.value;
+  const searchValue: string = searchField.value;
   const data = await getData(searchValue);
   makeCards(data);
   main.style.display = "inline-block";
@@ -36,7 +40,8 @@ newForm?.addEventListener("submit", async (e) => {
 function makeCards(arrayToRender: ApiResponse[]) {
   for (const key of arrayToRender) {
     // create article containing event card
-    if (key.name && key.summary) {
+    if (key.name) {
+      //&& key.summary
       const eventCard: HTMLElement = document.createElement(
         "article"
       ) as HTMLElement;

@@ -7,6 +7,7 @@
     <script type="module" src="/src/main.ts" defer></script>
     <script type="module" src="/src/render.ts" defer></script>
     <script type="module" src="/src/map.ts"></script>
+    <script type="module" src="/src/apikey.ts"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>PolisEvents</title>
   </head>
@@ -48,7 +49,7 @@
           ? console.warn(p + " only loads once. Ignoring:", g)
           : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
       })({
-        key: "AIzaSyBBFXoIZ8Jcxt4b3c8C0OfiYeoFEgPdps0",
+        key: `${apikey}`,
         v: "weekly",
         // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
         // Add other bootstrap parameters as needed, using camel case.
