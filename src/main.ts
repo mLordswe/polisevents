@@ -14,8 +14,8 @@ export async function getData(userInput: string): Promise<ApiResponse[]> {
 }
 
 export const getMapLocation = (location: ApiResponse[]) => {
-  const coords: number = location[5].location.gps;
-  const name: string = location[1].name;
+  const coords: number = location[0].location.gps;
+  const name: string = location[0].name;
   const [lat, lon] = String(coords).split(",");
   try {
     return initMap(parseFloat(lat), parseFloat(lon), name);

@@ -61,4 +61,5 @@ body {
 }
 #map {
   height: 100%;
+  grid-row: 2;
 }

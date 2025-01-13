@@ -1,12 +1,13 @@
 import { getData } from "./main";
 import { ApiResponse } from "./types";
-
+import { initMap } from "./map";
 import { getMapLocation } from "./main";
 //=============TO DO =============================
 // Fixa error hantering för felaktig input eller inputvärde som inte existerar i apin
 //Fixa fel i koden där cardsen inte uppdateras vid ny sökning ✅
 //Göra så att man kan Pin'a städer/brott för att se
 //eventuellt lägga in en border runt staden man sökt på
+//Undersök varför vissa städer/byar inte fungerar i programmet.
 //=============HTML===============================
 //Create form and searchbutton
 const body = document.querySelector("body");
@@ -31,11 +32,16 @@ searchButton.innerHTML = "Sök";
 //listener for searchbutton and renders cards with information
 newForm?.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const searchValue: string = searchField.value;
-  const data = await getData(searchValue);
-  makeCards(data);
-  main.style.display = "inline-block";
-  getMapLocation(data);
+  try {
+    const searchValue: string = searchField.value;
+    const data = await getData(searchValue);
+    makeCards(data);
+    main.style.display = "inline-block";
+    getMapLocation(data);
+  } catch (error) {
+    console.log("felaktig input");
+    main.style.display = "none";
+  }
 });
 //==================Functions========================
 function makeCards(arrayToRender: ApiResponse[]) {

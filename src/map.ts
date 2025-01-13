@@ -15,6 +15,12 @@ loader.load().then(async () => {
   map = new Map(document.getElementById("map") as HTMLElement, {
     center: { lat: 60.7419, lng: 15.0181 },
     zoom: 4,
+    disableDefaultUI: true, // Döljer standardkontroller
+    gestureHandling: "none", // Förhindrar interaktion
+    draggable: false, // Förhindrar att man kan dra runt kartan
+    zoomControl: true, // Förhindrar zoom
+    scrollwheel: true, // Förhindrar zoom med scroll
+    streetViewControl: false, // Förhindrar Street View
   });
 });
 // Initialize and add the map
@@ -38,9 +44,15 @@ export async function initMap(
 
   // The map, centered at sweden
   map = new Map(document.getElementById("map") as HTMLElement, {
-    zoom: 4,
+    zoom: 10,
     center: position,
     mapId: "DEMO_MAP_ID",
+    disableDefaultUI: true, // Döljer standardkontroller
+    gestureHandling: "none", // Förhindrar interaktion
+    draggable: false, // Förhindrar att man kan dra runt kartan
+    zoomControl: true, // Förhindrar zoom
+    scrollwheel: true, // Förhindrar zoom med scroll
+    streetViewControl: false, // Förhindrar Street View
   });
 
   //
