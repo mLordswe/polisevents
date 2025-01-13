@@ -14,12 +14,12 @@ Kopiera kod
 git clone https://github.com/mLordswe/polisevents
 Gå till projektmappen:
 
-bash
+
 Kopiera kod
 cd polisevents
 Installera alla nödvändiga dependancies:
 
-bash
+
 Kopiera kod
 npm install
 Användning
