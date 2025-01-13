@@ -1,6 +1,6 @@
 import { getData } from "./main";
 import { ApiResponse } from "./types";
-import { initMap } from "./map";
+
 import { getMapLocation } from "./main";
 //=============TO DO =============================
 // Fixa error hantering för felaktig input eller inputvärde som inte existerar i apin

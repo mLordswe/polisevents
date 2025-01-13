@@ -56,11 +56,12 @@ export async function initMap(
   });
 
   //
-  const marker = new AdvancedMarkerElement({
+  let marker = new AdvancedMarkerElement({
     map: map,
     position: position,
     title: `${name}`,
   });
+  console.log(marker); // Använd marker för att hämta positionen
 }
 
 // export const mapdata = ((g) => {
