@@ -4,8 +4,8 @@ import { ApiResponse } from "./types";
 import { getMapLocation } from "./main";
 //=============TO DO =============================
 // Fixa error hantering för felaktig input eller inputvärde som inte existerar i apin
-//Fixa fel i koden där cardsen inte uppdateras vid ny sökning
-//Göra så att man kan Pin'a städer/brott för att se senaste inom dem
+//Fixa fel i koden där cardsen inte uppdateras vid ny sökning ✅
+//Göra så att man kan Pin'a städer/brott för att se
 //=============HTML===============================
 //Create form and searchbutton
 const body = document.querySelector("body");
@@ -38,6 +38,7 @@ newForm?.addEventListener("submit", async (e) => {
 });
 //==================Functions========================
 function makeCards(arrayToRender: ApiResponse[]) {
+  main.innerHTML = "";
   for (const key of arrayToRender) {
     // create article containing event card
     if (key.name) {
@@ -49,6 +50,7 @@ function makeCards(arrayToRender: ApiResponse[]) {
       eventCard.className = "event-card";
 
       main.appendChild(eventCard);
+
       eventCard.innerHTML = eventCard.innerHTML =
         `${key.name}: ${key.summary} ` +
         `<a href="https://www.polisen.se${key.url}" target="_blank">Läs mer</a>`;
