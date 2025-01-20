@@ -1,4 +1,4 @@
-/* body {
+body {
   background-color: gray;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -62,4 +62,4 @@ body {
 #map {
   height: 100%;
   grid-row: 2;
-} */
+}

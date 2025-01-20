@@ -4,7 +4,7 @@ import { makeCards } from "../cards/cards";
 // import { searchField } from "../searchfield/searchfield";
 
 export const newForm = (): HTMLFormElement => {
-  const main = document.querySelector("main") as HTMLElement;
+  const main = document.querySelector("header") as HTMLElement;
   const formDiv = main.appendChild(document.createElement("div"));
   formDiv.className = "formDiv";
 
