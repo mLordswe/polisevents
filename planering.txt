@@ -7,3 +7,12 @@ göra filter för tid?
 
 
 
+//=============TO DO =============================
+// Fixa error hantering för felaktig input eller inputvärde som inte existerar i apin✅
+//Fixa fel i koden där cardsen inte uppdateras vid ny sökning ✅
+//Göra så att man kan Pin'a städer/brott för att se❓
+//eventuellt lägga in en border runt staden man sökt på❌
+//Undersök varför vissa städer/byar inte fungerar i programmet.✅
+//ändra så att man inte appendar allt från main och lägg en div tagg istället apin✅
+//fixa en autocomplete
+//göra en lista med sökningar som sedan går att ta bort

@@ -1,5 +1,6 @@
 import { ApiResponse } from "./types";
 import { initMap } from "./map";
+import { renderPage } from "./render";
 export async function getData(userInput: string): Promise<ApiResponse[]> {
   const response = await fetch(
     `https://polisen.se/api/events?locationname=${userInput}`
@@ -13,9 +14,9 @@ export async function getData(userInput: string): Promise<ApiResponse[]> {
   return data;
 }
 
-export const getMapLocation = (location: ApiResponse[]) => {
-  const coords: number = location[0].location.gps;
-  const name: string = location[0].name;
+export const getMapLocation = (location: ApiResponse) => {
+  const coords: number = location.location.gps;
+  const name: string = location.name;
   const [lat, lon] = String(coords).split(",");
   try {
     return initMap(parseFloat(lat), parseFloat(lon), name);
@@ -23,3 +24,7 @@ export const getMapLocation = (location: ApiResponse[]) => {
     console.log("Error: you tried to get the coords but you suck");
   }
 };
+//<main>
+// Searchbutton for the form
+
+renderPage();
