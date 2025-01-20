@@ -1,4 +1,4 @@
-import "./main.scss";
+import "./maintag.scss";
 
 export function main(): HTMLElement {
   const body = document.querySelector("body");
