@@ -8,6 +8,6 @@ export function srcButton(): HTMLElement {
 
   searchButton?.setAttribute("button", "submit");
   searchButton?.setAttribute("id", "formbutton");
-  searchButton.innerHTML = "Sök";
+  searchButton.innerHTML = "🔎";
   return searchButton as HTMLElement;
 }
