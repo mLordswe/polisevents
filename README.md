@@ -9,7 +9,6 @@ För att komma igång med projektet, följ dessa steg:
 
 Klona ner repot:
 
-Kopiera kod
 git clone https://github.com/mLordswe/polisevents
 Gå till projektmappen:
 
