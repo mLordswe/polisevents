@@ -20,7 +20,11 @@ Installera alla nödvändiga dependancies:
 npm install
 
 Användning
-Öppna projektet i en webbläsare.
+Öppna projektet i kommandotolken och skriv npm run dev
+
+klicka sedan på ip-addressen som länkas i konsolen för att öppna webbsidan
+
+
 Använd sökfältet för att skriva in namnet på den stad du vill se brottshistorik för.
 Projektet kommer att visa en lista med brott som har inträffat i den valda staden samt en karta via Google Maps för att visualisera platsen för dessa brott.
 Licens
