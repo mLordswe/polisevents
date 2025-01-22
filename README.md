@@ -14,6 +14,8 @@ Gå till projektmappen:
 
 
 cd polisevents
+
+
 Installera alla nödvändiga dependancies:
 
 npm install
