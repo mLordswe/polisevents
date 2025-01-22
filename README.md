@@ -4,8 +4,8 @@ CrimeScope är ett webbaserat projekt som låter användare söka efter brottshi
 Teknologier
 Polismyndighetens API: Används för att hämta data om brott som har inträffat i olika områden.
 Google Maps API: Används för att visa kartor och ge användaren möjlighet att välja plats för sökning.
-Installation
 För att komma igång med projektet, följ dessa steg:
+**installation**
 
 Klona ner repot:
 
@@ -13,13 +13,14 @@ Kopiera kod
 git clone https://github.com/mLordswe/polisevents
 Gå till projektmappen:
 
-Kopiera kod
+
 cd polisevents
 Installera alla nödvändiga dependancies:
 
 npm install
 
-Användning
+**Användning**
+
 Öppna projektet i kommandotolken och skriv npm run dev
 
 klicka sedan på ip-addressen som länkas i konsolen för att öppna webbsidan
