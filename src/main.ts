@@ -14,17 +14,4 @@ export async function getData(userInput: string): Promise<ApiResponse[]> {
   return data;
 }
 
-// export const getMapLocation = (location: ApiResponse) => {
-//   const coords: number = location.location.gps;
-//   const name: string = location.name;
-//   const [lat, lon] = String(coords).split(",");
-//   try {
-//     return initMap(parseFloat(lat), parseFloat(lon), name);
-//   } catch (error) {
-//     console.log("Error: you tried to get the coords but you suck");
-//   }
-// };
-//<main>
-// Searchbutton for the form
-
 renderPage();
