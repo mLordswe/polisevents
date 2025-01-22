@@ -1,4 +1,11 @@
+.newForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
 #formbutton {
+  grid-column: 4;
+  grid-row: 1;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   border-left: none;

@@ -1,16 +1,18 @@
-import { srcButton } from "./styles/components/button/button";
-import { main } from "./styles/layouts/main/main";
-import { newForm } from "./styles/components/form/form";
-import { searchField } from "./styles/components/searchfield/searchfield";
+// import { srcButton } from "./components/button/button";
+// import { main } from "./layouts/main/main";
+
+import { newForm } from "./components/form/form";
+import { searchField } from "./components/searchfield/searchfield";
 
 //=============HTML===============================
 //Create form and searchbutton
 
 export function renderPage() {
-  main();
-  newForm();
-  searchField();
-  srcButton();
+  const main = document.querySelector("main") as HTMLDivElement;
+  const header = document.querySelector("header") as HTMLElement;
+  main.appendChild(newForm());
+
+  header.appendChild(searchField());
 }
 
 //listener for searchbutton and renders cards with information

@@ -1,0 +1,11 @@
+header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 100%;
+
+  .form-Div {
+    display: grid;
+    grid-column: 2;
+  }
+}

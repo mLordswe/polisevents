@@ -15,7 +15,7 @@ göra filter för tid?
 //Undersök varför vissa städer/byar inte fungerar i programmet.✅
 //ändra så att man inte appendar allt från main och lägg en div tagg istället apin✅
 //fixa en autocomplete
-//göra en lista med sökningar som sedan går att ta bort
+//göra en lista med sökningar som sedan går att ta bort✅
 
 
 //thoughtprocess
