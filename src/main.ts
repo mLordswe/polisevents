@@ -1,9 +1,10 @@
 import { ApiResponse } from "./types";
 import { renderPage } from "./render";
+
 export async function getData(userInput: string): Promise<ApiResponse[]> {
-  const response = await fetch(
-    `https://polisen.se/api/events?locationname=${userInput}`
-  );
+  const URL = `https://polisen.se/api/events?${userInput}`;
+  console.log(URL);
+  const response = await fetch(URL);
   if (!response.ok) {
     throw new Error("Detta fungerar inte");
   }
@@ -11,5 +12,4 @@ export async function getData(userInput: string): Promise<ApiResponse[]> {
   console.log(data);
   return data;
 }
-
 renderPage();

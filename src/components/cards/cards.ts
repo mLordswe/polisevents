@@ -1,8 +1,13 @@
 import "./cards.scss";
 import { ApiResponse } from "../../types";
 export function makeCards(arrayToRender: ApiResponse[]) {
-  const cardContainer = document.createElement("div") as HTMLDivElement;
-
+  let cardContainer = document.querySelector(".card-div") as HTMLDivElement;
+  if (cardContainer) {
+    cardContainer.innerHTML = "";
+  } else {
+    cardContainer = document.createElement("div") as HTMLDivElement;
+    cardContainer.className = "card-div";
+  }
   cardContainer.className = "card-div";
 
   arrayToRender.forEach((key) => {
@@ -10,7 +15,7 @@ export function makeCards(arrayToRender: ApiResponse[]) {
       "article"
     ) as HTMLElement;
     eventCard.className = "event-card";
-
+    cardContainer.appendChild(eventCard) as HTMLElement;
     if (key.name && key.summary && key.url) {
       cardContainer.appendChild(eventCard) as HTMLElement;
 
@@ -24,5 +29,4 @@ export function makeCards(arrayToRender: ApiResponse[]) {
     }
   });
   return cardContainer;
-  console.log(cardContainer);
 }

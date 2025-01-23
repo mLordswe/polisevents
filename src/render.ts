@@ -3,6 +3,7 @@
 
 import { newForm } from "./components/form/form";
 import { searchField } from "./components/searchfield/searchfield";
+import { selectButtons } from "./components/select-filter/select-filter";
 
 //=============HTML===============================
 //Create form and searchbutton
@@ -11,7 +12,7 @@ export function renderPage() {
   const main = document.querySelector("main") as HTMLDivElement;
   const header = document.querySelector("header") as HTMLElement;
   main.appendChild(newForm());
-
+  header.appendChild(selectButtons());
   header.appendChild(searchField());
 }
 
