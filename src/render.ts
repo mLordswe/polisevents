@@ -1,6 +1,3 @@
-// import { srcButton } from "./components/button/button";
-// import { main } from "./layouts/main/main";
-
 import { newForm } from "./components/form/form";
 import { searchField } from "./components/searchfield/searchfield";
 import { selectButtons } from "./components/select-filter/select-filter";
@@ -9,9 +6,17 @@ import { selectButtons } from "./components/select-filter/select-filter";
 //Create form and searchbutton
 
 export function renderPage() {
-  const main = document.querySelector("main") as HTMLDivElement;
   const header = document.querySelector("header") as HTMLElement;
-  main.appendChild(newForm());
+  if (!header) {
+    console.error("Header element not found");
+    return;
+  }
+
+  const formDiv = document.createElement("div") as HTMLDivElement;
+  header.appendChild(formDiv);
+  formDiv.className = "formDiv";
+  formDiv.appendChild(newForm());
+
   header.appendChild(selectButtons());
   header.appendChild(searchField());
 }

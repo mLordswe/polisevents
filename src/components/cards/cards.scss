@@ -1,7 +1,38 @@
 .card-div {
-  width: 20vw;
+  padding: 2rem;
+  margin: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
   overflow: scroll;
-  display: block;
-  height: 50vh;
-  width: 50vw;
+  height: 50rem;
+}
+
+.event-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  width: 200px;
+}
+
+.event-card h3 {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.event-card p {
+  font-size: 1em;
+  color: #666;
+}
+
+.event-card a {
+  font-size: 0.9em;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.event-card a:hover {
+  text-decoration: underline;
 }

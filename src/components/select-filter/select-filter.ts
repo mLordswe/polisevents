@@ -4,9 +4,11 @@ const options = {
   datum: "DateTime=",
 };
 export const selectButtons = () => {
+  const formDiv = document.querySelector(".formDiv") as HTMLDivElement;
+
   const selectDiv = document.createElement("div") as HTMLDivElement;
   selectDiv.className = "selectDiv";
-
+  formDiv.appendChild(selectDiv);
   const selectField = document.createElement("select") as HTMLSelectElement;
   selectField.className = "selectField";
 

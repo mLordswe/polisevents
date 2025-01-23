@@ -4,15 +4,15 @@ import { makeCards } from "../cards/cards";
 import { searchHistory } from "./history";
 import { getSelectedValue } from "../select-filter/select-filter";
 export const newForm = (): HTMLFormElement => {
-  const header = document.querySelector("header") as HTMLElement;
-  const formDiv = header.appendChild(document.createElement("div"));
-  formDiv.className = "formDiv";
-
-  const newForm = formDiv.appendChild(
-    document.createElement("form")
-  ) as HTMLFormElement;
+  // const header = document.querySelector("header") as HTMLElement;
+  // const formDiv = document.createElement("div");
+  // formDiv.className = "formDiv";
+  // header.appendChild(formDiv);
+  const formDiv = document.querySelector(".formDiv");
+  const newForm = document.createElement("form") as HTMLFormElement;
   newForm?.setAttribute("id", "newForm");
   newForm.setAttribute("autocomplete", "off");
+  formDiv?.appendChild(newForm);
 
   const searchButton = document.createElement("button") as HTMLElement;
   searchButton?.setAttribute("button", "submit");
