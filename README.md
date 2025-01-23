@@ -1,5 +1,5 @@
-CrimeScope - Brottshistorik per stad
-CrimeScope är ett webbaserat projekt som låter användare söka efter brottshistorik för en specifik stad genom att använda Polismyndighetens API och Google Maps API. Projektet visar relevanta brottsinformationer baserat på användarens val av plats.
+PolisEvents - Brottshistorik per stad
+PolisEvents är ett webbaserat projekt som låter användare söka efter brottshistorik för en specifik stad genom att använda Polismyndighetens API och Google Maps API. Projektet visar relevanta brottsinformationer baserat på användarens val av plats.
 
 Teknologier
 Polismyndighetens API: Används för att hämta data om brott som har inträffat i olika områden.
