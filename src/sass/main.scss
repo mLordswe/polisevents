@@ -1,7 +1,7 @@
-@use "./sass/index.scss";
+@import "./index";
 
 body {
-  background-color: $primary;
+  background-color: $secondary;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;

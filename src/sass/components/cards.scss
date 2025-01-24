@@ -1,4 +1,5 @@
 .card-div {
+  @include borderstyle;
   padding: 2rem;
   margin: 10rem;
   display: flex;

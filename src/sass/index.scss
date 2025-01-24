@@ -1,3 +1,17 @@
-@forward "./utils/mixins";
-@forward "./utils/_colors";
-@forward "./layout/header.scss";
+// Base styles
+// @import "./base/reset";
+// @import "./base/typography";
+
+// Utilities
+@import "./utils/colors";
+@import "./utils/mixins";
+@import "./utils/variables";
+
+// Layout
+@import "./layout/header";
+
+// Components
+@import "./components/cards.scss";
+@import "./components/form";
+@import "./components/searchfield";
+@import "./components/select_filter.scss";
