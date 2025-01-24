@@ -1,6 +1,6 @@
-@use "../../styles/colors";
+@use "../utils/colors";
 header {
-  background-color: variables.$primary;
+  background-color: colors.$primary;
 
   padding: 10px 0;
   text-align: center;

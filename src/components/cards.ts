@@ -1,4 +1,4 @@
-import "./cards.scss";
+import "../sass/components/cards.scss";
 import { ApiResponse } from "../types";
 export function makeCards(arrayToRender: ApiResponse[]) {
   let cardContainer = document.querySelector(".card-div") as HTMLDivElement;
