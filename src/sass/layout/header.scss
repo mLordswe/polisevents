@@ -1,0 +1,7 @@
+@use "../../styles/colors";
+header {
+  background-color: variables.$primary;
+
+  padding: 10px 0;
+  text-align: center;
+}

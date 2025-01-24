@@ -1,4 +1,4 @@
-import "./searchfield.scss";
+import "../sass/components/searchfield.scss";
 export function searchField(): HTMLElement {
   const formDiv = document.querySelector(".formDiv") as HTMLDivElement;
   const searchField: HTMLInputElement = document.createElement(

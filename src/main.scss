@@ -1,0 +1,8 @@
+@use "./variables";
+@use "./layouts/header/header.scss";
+body {
+  background-color: variables.$secondary;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}

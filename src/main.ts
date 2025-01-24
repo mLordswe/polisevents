@@ -1,6 +1,6 @@
 import { ApiResponse } from "./types";
 import { renderPage } from "./render";
-
+import "./main.scss";
 export async function getData(userInput: string): Promise<ApiResponse[]> {
   const URL = `https://polisen.se/api/events?${userInput}`;
   console.log(URL);

@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 apikey.ts
+run.bat
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

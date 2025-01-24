@@ -1,8 +1,8 @@
-import { getData } from "../../main";
-import "./form.scss";
-import { makeCards } from "../cards/cards";
+import { getData } from "../main";
+import "../sass/components/form.scss";
+import { makeCards } from "./cards";
 import { searchHistory } from "./history";
-import { getSelectedValue } from "../select-filter/select-filter";
+import { getSelectedValue } from "./select-filter";
 export const newForm = (): HTMLFormElement => {
   // const header = document.querySelector("header") as HTMLElement;
   // const formDiv = document.createElement("div");

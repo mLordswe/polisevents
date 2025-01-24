@@ -1,5 +1,5 @@
 import "./cards.scss";
-import { ApiResponse } from "../../types";
+import { ApiResponse } from "../types";
 export function makeCards(arrayToRender: ApiResponse[]) {
   let cardContainer = document.querySelector(".card-div") as HTMLDivElement;
   if (cardContainer) {

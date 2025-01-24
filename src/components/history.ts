@@ -9,14 +9,14 @@ const listOfSearches: string[] = [];
 export function searchHistory(x: string) {
   listOfSearches.push(`<li>${x}</li>`);
   console.log(listOfSearches);
-  // const elementLI = document.createElement("li") as HTMLLIElement;
+
   searchHistoryDiv.innerHTML = "";
   for (let i = 0; i < listOfSearches.length; i++) {
     const history = listOfSearches[i];
     const elementUL = document.createElement("ul");
-    elementUL.className = `searchHistoryListItem`; //tog bort ${[i]}
+    elementUL.className = `searchHistoryListItem`;
     searchHistoryDiv.appendChild(elementUL) as HTMLElement;
-    elementUL.innerHTML = history;
+    elementUL.innerHTML = `${history}gav  resultat`;
     const removeButton = elementUL.appendChild(
       document.createElement("button")
     );

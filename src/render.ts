@@ -1,6 +1,6 @@
-import { newForm } from "./components/form/form";
-import { searchField } from "./components/searchfield/searchfield";
-import { selectButtons } from "./components/select-filter/select-filter";
+import { newForm } from "./components/form";
+import { searchField } from "./components/searchfield";
+import { selectButtons } from "./components/select-filter";
 
 //=============HTML===============================
 //Create form and searchbutton
