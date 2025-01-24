@@ -1,5 +1,5 @@
-@use "./variables";
-@use "./layouts/header/header.scss";
+@use "./sass/utils/variables" as variables;
+
 body {
   background-color: variables.$secondary;
   font-family: Arial, sans-serif;
