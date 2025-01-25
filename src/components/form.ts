@@ -27,13 +27,13 @@ export const newForm = (): HTMLFormElement => {
       "searchField"
     ) as HTMLInputElement;
     const searchValue = searchfield.value; // Detta är användarens input
-    const selectedValue = getSelectedValue(); // Detta är den valda kategorin eller platsen
+    const selectedValue = getSelectedValue(); // Detta är den valda kategorin
 
     try {
       const data = await getData(
         `${selectedValue.trimEnd()}${searchValue.trimStart()}`
       );
-      console.log(`${selectedValue.trimEnd()}${searchValue.trimStart()}`);
+
       searchHistory(searchValue);
       document.querySelector("main")?.appendChild(makeCards(data));
     } catch (error) {

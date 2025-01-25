@@ -1,0 +1,13 @@
+@use "../layout/main.scss";
+#searchHistoryDiv {
+  order: 2;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 15rem;
+  height: 100%;
+  padding: 1rem;
+  margin: unset;
+}
+li {
+  list-style: none;
+}

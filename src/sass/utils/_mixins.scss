@@ -1,8 +1,12 @@
-@mixin margin-padding {
-  margin: 1rem;
-  padding: 1rem;
-}
-@mixin borderstyle {
-  border: 1px solid $primary;
+@use "./colors" as *;
+
+@mixin borderstyle() {
+  border: 2px solid $primary;
   border-radius: 5px;
+}
+@mixin grid-layout($areas) {
+  display: grid;
+  grid-template-areas: $areas;
+  grid-template-rows: 20vh 1fr 20vh;
+  gap: 1rem;
 }

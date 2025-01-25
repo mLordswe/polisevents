@@ -1,6 +1,7 @@
-const body = document.querySelector("body");
+import "../sass/components/history.scss";
+const main = document.querySelector("main") as HTMLElement;
 
-const searchHistoryDiv = body?.appendChild(
+const searchHistoryDiv = main.appendChild(
   document.createElement("div")
 ) as HTMLElement;
 searchHistoryDiv.setAttribute("id", "searchHistoryDiv");
@@ -13,6 +14,7 @@ export function searchHistory(x: string) {
   searchHistoryDiv.innerHTML = "";
   for (let i = 0; i < listOfSearches.length; i++) {
     const history = listOfSearches[i];
+
     const elementUL = document.createElement("ul");
     elementUL.className = `searchHistoryListItem`;
     searchHistoryDiv.appendChild(elementUL) as HTMLElement;
@@ -23,9 +25,10 @@ export function searchHistory(x: string) {
     removeButton.className = "removeButton";
 
     removeButton.addEventListener("click", (e) => {
+      listOfSearches.pop();
+      console.log(listOfSearches);
       const button = e.target as HTMLElement;
       const parentLI = button.parentElement as HTMLLinkElement;
-      listOfSearches.splice(i, 1);
       parentLI.remove();
     });
   }

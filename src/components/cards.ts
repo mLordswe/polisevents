@@ -33,7 +33,6 @@ export function makeCards(arrayToRender: ApiResponse[]) {
       cardURL.textContent = "Läs mer";
       cardURL.target = "_blank";
       eventCard.appendChild(cardURL);
-      console.log(key.url);
     } else {
       console.log("Ogiltig data:", key);
     }
