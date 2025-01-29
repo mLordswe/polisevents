@@ -7,7 +7,6 @@ export const searchHistoryDiv = main.appendChild(
 ) as HTMLElement;
 searchHistoryDiv.setAttribute("id", "searchHistoryDiv");
 const listOfSearches: string[] = [];
-searchHistoryDiv.style.display = "none";
 
 export function searchHistory(x: string) {
   listOfSearches.push(`<li>${x}</li>`);
@@ -52,6 +51,8 @@ export const setSearchFromHistory = () => {
   searchItems.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
+      item.setAttribute("form", "newForm");
+      item.setAttribute("type", "submit");
 
       console.log("hej");
 
