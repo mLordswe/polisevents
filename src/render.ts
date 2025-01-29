@@ -1,6 +1,6 @@
 import { newForm } from "./components/form";
 import { searchField } from "./components/searchfield";
-import { selectButtons } from "./components/select-filter";
+import { selectButtons } from "./components/selectfield";
 
 //=============HTML===============================
 //Create form and searchbutton
@@ -24,11 +24,3 @@ export function renderPage() {
 //listener for searchbutton and renders cards with information
 
 //==================Functions========================
-
-// function errorMsgForSearch() {
-//   console.log("felaktig input");
-//   searchField.style.border = "red 2px solid";
-//   searchField.value = "";
-//   searchField.placeholder = "Felaktig input, ex Stockholm";
-//   main.style.display = "none";
-// }

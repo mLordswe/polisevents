@@ -10,8 +10,11 @@
 // Layout
 @forward "./layout/header";
 @forward "./layout/footer";
+@forward "./layout/main";
+
 // Components
 @forward "./components/cards.scss";
 @forward "./components/form";
 @forward "./components/searchfield";
-@forward "./components/select_filter.scss";
+
+@forward "./components/selectField.scss";

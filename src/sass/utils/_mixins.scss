@@ -10,3 +10,11 @@
   grid-template-rows: 20vh 1fr 20vh;
   gap: 1rem;
 }
+@mixin handle-overflow($has-overflow) {
+  @if $has-overflow {
+    overflow: auto; // or 'scroll', 'hidden', etc.
+    white-space: nowrap;
+  } @else {
+    overflow: visible;
+  }
+}

@@ -4,10 +4,14 @@
   box-sizing: border-box;
   flex-direction: column;
   width: 15rem;
-  height: 100%;
+  max-height: 30rem;
   padding: 1rem;
   margin: unset;
+  overflow-y: scroll;
 }
 li {
   list-style: none;
+}
+ul:hover {
+  cursor: pointer;
 }

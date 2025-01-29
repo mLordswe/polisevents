@@ -1,11 +1,14 @@
 @use "../utils/mixins" as *;
 @use "../layout/main.scss";
+
+$overflow: true; // Set to true or false
 .card-div {
   box-sizing: border-box;
   @include borderstyle;
   padding: 1rem;
   margin: 1rem;
   height: 30rem;
+
   overflow-y: scroll;
   //flex
   display: flex;

@@ -1,4 +1,5 @@
 const options = {
+  //dynamiskt ifall polisen skulle ändra sina endpoints
   platser: "locationname=",
   händelser: "type=",
   datum: "DateTime=",

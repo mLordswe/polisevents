@@ -1,8 +1,8 @@
 @use "../utils/colors";
-
+@use "../components/form.scss";
+@use "../components/selectField.scss";
+@use "../components/searchfield.scss";
 header {
-  display: inline-block;
-  box-sizing: border-box;
   background-color: colors.$primary;
   margin: 0;
   padding: 10px;
