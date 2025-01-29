@@ -17,8 +17,8 @@ export function renderPage() {
   formDiv.className = "formDiv";
   formDiv.appendChild(newForm());
 
-  header.appendChild(selectButtons());
-  header.appendChild(searchField());
+  formDiv.appendChild(selectButtons());
+  formDiv.appendChild(searchField());
 }
 
 //listener for searchbutton and renders cards with information

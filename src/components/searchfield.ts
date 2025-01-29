@@ -1,6 +1,5 @@
 import "../sass/components/searchfield.scss";
-import { getSelectedValue, options, selectButtons } from "./selectfield";
-const selectedValue = getSelectedValue();
+
 export function searchField(): HTMLInputElement {
   const formDiv = document.querySelector(".formDiv") as HTMLDivElement;
   const searchField: HTMLInputElement = document.createElement(
