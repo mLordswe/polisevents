@@ -1,5 +1,3 @@
-import { searchField } from "./searchfield";
-
 export const options = {
   //dynamiskt ifall polisen skulle ändra sina endpoints
   platser: "locationname=",

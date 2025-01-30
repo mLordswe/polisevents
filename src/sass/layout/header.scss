@@ -14,11 +14,11 @@ header {
   @include flex-start;
   flex-direction: row;
   gap: max(25%);
+  flex-wrap: wrap;
   @media screen and (max-width: 710px) {
     gap: 0;
     @include flex-center;
   }
-  flex-wrap: wrap;
 }
 header h1 {
   margin-bottom: 1rem;

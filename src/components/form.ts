@@ -3,7 +3,7 @@ import "../sass/components/form.scss";
 import { makeCards } from "./cards";
 import { searchHistory, searchHistoryDiv } from "./history";
 
-import { getSelectedValue, selectButtons } from "./selectfield";
+import { getSelectedValue } from "./selectfield";
 export const newForm = (): HTMLFormElement => {
   // const header = document.querySelector("header") as HTMLElement;
   // const formDiv = document.createElement("div");
