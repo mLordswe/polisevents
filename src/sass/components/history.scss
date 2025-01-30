@@ -5,17 +5,19 @@
   box-sizing: border-box;
   flex-direction: row;
   width: 15rem;
-  max-height: 30rem;
+  max-height: 24.3rem;
   padding: 1rem;
   margin: 1rem;
 
   overflow-y: scroll;
   @include borderstyle;
 }
+
 li {
   list-style: none;
+  margin-left: 0;
 }
-ul:hover {
+li:hover {
   cursor: pointer;
 }
 .searchHistoryListItem {
@@ -36,6 +38,7 @@ ul:hover {
   margin: 0.5rem;
   margin-top: unset;
   margin-bottom: 0.5rem;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {

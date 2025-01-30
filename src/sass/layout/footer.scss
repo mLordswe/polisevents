@@ -2,6 +2,7 @@
 
 footer {
   display: inline-block;
+  flex-shrink: 0;
   background-color: $primary;
   height: 20vh;
   width: 100%;

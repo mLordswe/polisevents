@@ -1,6 +1,7 @@
+@use "../utils/colors" as *;
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
 .formDiv {
-  display: flex;
+  @include flex-center;
   flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
 }

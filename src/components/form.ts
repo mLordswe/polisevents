@@ -11,6 +11,8 @@ export const newForm = (): HTMLFormElement => {
   // header.appendChild(formDiv);
   const formDiv = document.querySelector(".formDiv");
   const newForm = document.createElement("form") as HTMLFormElement;
+  const h2 = document.querySelector("main > h2") as HTMLElement;
+
   newForm?.setAttribute("id", "newForm");
   newForm.setAttribute("autocomplete", "off");
   formDiv?.appendChild(newForm);
@@ -23,10 +25,12 @@ export const newForm = (): HTMLFormElement => {
   newForm.appendChild(searchButton);
 
   newForm?.addEventListener("submit", async (e) => {
+    h2.remove();
     e.preventDefault();
     const searchfield = document.getElementById(
       "searchField"
     ) as HTMLInputElement;
+
     const searchValue = searchfield.value; // Detta är användarens input
     const selectedValue = getSelectedValue(); // Detta är den valda kategorin
 
@@ -35,10 +39,12 @@ export const newForm = (): HTMLFormElement => {
         `${selectedValue.trimEnd()}${searchValue.trimStart()}`
       );
 
-      searchHistory(searchValue);
+      searchHistory(searchValue, data.length);
       document.querySelector("main")?.appendChild(makeCards(data));
+      searchHistoryDiv.style.opacity = "";
     } catch (error) {
-      const errDiv = document.createElement("div");
+      const errDiv = document.createElement("div") as HTMLElement;
+      document.querySelector("main")?.appendChild(errDiv);
       errDiv.innerHTML = `Din sökning ${searchValue} fungerade inte, Prova att söka på en Svensk Stad`;
       errDiv.style.color = "Red";
     }

@@ -1,8 +1,7 @@
 @use "./colors" as *;
-
+@use "./variables" as *;
 @mixin borderstyle() {
   border: 2px solid $primary;
-  border-radius: 5px;
 }
 @mixin grid-layout($areas) {
   display: grid;
@@ -17,4 +16,16 @@
   } @else {
     overflow: visible;
   }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }

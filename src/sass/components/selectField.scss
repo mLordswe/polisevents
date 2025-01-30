@@ -1,1 +1,12 @@
-
+@use "../utils/colors";
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+.selectField {
+  height: 2rem;
+  border: unset;
+  @include borderstyle;
+  border-left: unset;
+  border-right: unset;
+  border-radius: unset;
+  margin: 0;
+}

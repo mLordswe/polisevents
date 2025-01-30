@@ -14,6 +14,10 @@ export function renderPage() {
 
   const formDiv = document.createElement("div") as HTMLDivElement;
   header.appendChild(formDiv);
+  if (!formDiv) {
+    console.error("formDiv not found");
+    return;
+  }
   formDiv.className = "formDiv";
   formDiv.appendChild(newForm());
 
