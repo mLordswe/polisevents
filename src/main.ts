@@ -9,7 +9,8 @@ export async function getData(userInput: string): Promise<ApiResponse[]> {
     throw new Error("Detta fungerar inte");
   }
   const data: ApiResponse[] = await response.json();
-  console.log(data);
+
   return data;
 }
+
 renderPage();

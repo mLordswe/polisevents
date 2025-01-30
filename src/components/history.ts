@@ -1,6 +1,9 @@
 import "../sass/components/history.scss";
+import { getData } from "../main";
+import { searchField } from "./searchfield";
 
 const main = document.querySelector("main") as HTMLElement;
+const data = await getData.length;
 
 export const searchHistoryDiv = main.appendChild(
   document.createElement("div")
@@ -13,13 +16,14 @@ export function searchHistory(x: string) {
   console.log(listOfSearches);
 
   searchHistoryDiv.innerHTML = "";
-  for (let i = 0; i < listOfSearches.length; i++) {
-    const history = listOfSearches[i];
+  listOfSearches.forEach((event) => {
+    const history = event;
 
     const elementUL = document.createElement("ul");
     elementUL.className = "searchHistoryListItem";
     searchHistoryDiv.appendChild(elementUL) as HTMLElement;
-    elementUL.innerHTML = `${history} gav  resultat`;
+    elementUL.innerHTML = `${history} `; // ändra history.length till rätt
+    console.log(getData.length);
     setSearchFromHistory(); // function to set search from history
 
     const removeButton = elementUL.appendChild(
@@ -27,7 +31,7 @@ export function searchHistory(x: string) {
     );
 
     removeButton.className = "removeButton";
-    removeButton.textContent = "Ta bort";
+    // removeButton.textContent = "Ta bort";
     removeButton.addEventListener("click", (e) => {
       const searchField = document.querySelector(
         "#searchField"
@@ -42,7 +46,7 @@ export function searchHistory(x: string) {
       const parentLI = button.parentElement as HTMLLinkElement;
       parentLI.remove();
     });
-  }
+  });
 }
 
 export const setSearchFromHistory = () => {

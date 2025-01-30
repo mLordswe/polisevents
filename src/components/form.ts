@@ -34,7 +34,7 @@ export const newForm = (): HTMLFormElement => {
       const data = await getData(
         `${selectedValue.trimEnd()}${searchValue.trimStart()}`
       );
-      searchHistoryDiv.style.display = "";
+
       searchHistory(searchValue);
       document.querySelector("main")?.appendChild(makeCards(data));
     } catch (error) {

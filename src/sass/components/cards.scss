@@ -45,3 +45,24 @@ $overflow: true; // Set to true or false
 .event-card a:hover {
   text-decoration: underline;
 }
+@media screen and (max-width: 1050px) {
+  .event-card h3 {
+    font-size: small;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card-div {
+    width: 100%;
+    justify-self: center;
+    margin-left: 14rem;
+    margin-right: 30%;
+  }
+  .event-card {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+  .event-card h3 {
+    font-size: smaller;
+  }
+}

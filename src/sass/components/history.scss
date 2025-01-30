@@ -1,13 +1,16 @@
 @use "../layout/main.scss";
+@use "../utils/mixins" as *;
 #searchHistoryDiv {
   order: 2;
   box-sizing: border-box;
-  flex-direction: column;
+  flex-direction: row;
   width: 15rem;
   max-height: 30rem;
   padding: 1rem;
-  margin: unset;
+  margin: 1rem;
+
   overflow-y: scroll;
+  @include borderstyle;
 }
 li {
   list-style: none;
@@ -15,8 +18,27 @@ li {
 ul:hover {
   cursor: pointer;
 }
+.searchHistoryListItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.removeButton {
+  background-color: rgb(231, 88, 88);
+  background-image: url("/imgs/trash-can-with-cover-svgrepo-com\ \(1\).svg");
+  background-position: center;
+  background-size: 1.2rem;
+  background-repeat: no-repeat;
+  height: 1.5rem;
+  width: 2rem;
+  border-radius: 10px;
+  margin: 0.5rem;
+  margin-top: unset;
+  margin-bottom: 0.5rem;
+}
 
-@media screen and (max-width: 485px) {
+@media screen and (max-width: 600px) {
   #searchHistoryDiv {
     display: none;
   }
