@@ -1,36 +1,100 @@
-PolisEvents - Brottshistorik per stad
-PolisEvents är ett webbaserat projekt som låter användare söka efter brottshistorik för en specifik stad genom att använda Polismyndighetens API och Google Maps API. Projektet visar relevanta brottsinformationer baserat på användarens val av plats.
+# Projektets Namn
 
-Teknologier
-Polismyndighetens API: Används för att hämta data om brott som har inträffat i olika områden.
-Google Maps API: Används för att visa kartor och ge användaren möjlighet att välja plats för sökning.
-För att komma igång med projektet, följ dessa steg:
-**installation**
+En kort beskrivning av projektet och dess syfte.
 
-Klona ner repot:
+## 📂 Projektstruktur
+```bash
+.
+├── src/                # Källkod
+│   ├── components/    
+│   │   ├── cards.ts
+│   │   ├── constants.ts
+│   │   ├── form.ts
+│   │   ├── history.ts
+│   │   ├── loading-spinner.ts
+│   │   ├── searchfield.ts
+│   │   ├── selectfield.ts
+│   ├── Scss/          # Stilmallar
+│   │   ├── components/
+│   │   │   ├── cards.scss
+│   │   │   ├── form.scss
+│   │   │   ├── history.scss
+│   │   │   ├── searchfield.scss
+│   │   │   ├── selectfield.scss
+│   │   │   ├── spinner.scss
+│   │   ├── layout/
+│   │   │   ├── footer.scss
+│   │   │   ├── header.scss
+│   │   │   ├── main.scss
+│   │   ├── utils/
+│   │   │   ├── colors.scss
+│   │   │   ├── mixins.scss
+│   │   │   ├── variables.scss
+│   │   ├── index.scss
+│   ├── main.scss
+│   ├── main.ts
+│   ├── render.ts
+│   ├── types.ts
+│   ├── vite-env.ts
+├── index.html
+├── LICENSE
+├── package-lock.json
+├── package.json
+├── tsconfig.json       # TypeScript-konfiguration
+└── README.md          # Dokumentation
+       
+```
 
+## 🚀 Installation
+
+Följ dessa steg för att installera och köra projektet lokalt:
+
+```bash
 git clone https://github.com/mLordswe/polisevents
-Gå till projektmappen:
-
-
-cd polisevents
-
-
-Installera alla nödvändiga dependancies:
-
+cd projekt
 npm install
+npm start
+```
 
-**Användning**
+## 🛠 Teknologier
 
-Öppna projektet i kommandotolken och skriv npm run dev
+Projektet är byggt med:
 
-klicka sedan på ip-addressen som länkas i konsolen för att öppna webbsidan
+- **vite** 
+- **typescript** 
+- **scss** 
+- **npm** 
 
 
-Använd sökfältet för att skriva in namnet på den stad du vill se brottshistorik för.
-Projektet kommer att visa en lista med brott som har inträffat i den valda staden samt en karta via Google Maps för att visualisera platsen för dessa brott.
-Licens
-Detta projekt är licensierat under MIT License - se LICENSE för mer information.
+## 📡 API Dokumentation
 
-Bidra
-Om du vill bidra till projektet, gör gärna en pull request med de ändringar du har gjort. Vi uppskattar alla bidrag!
+**Bas-URL:** `https://polisen.se/api/events`
+
+
+
+**Request:**
+```json
+{
+  "id": "0123456789",
+  "datetime": "yyyy-mm-dd",
+  "name":"town"
+  "summary":"url"
+  "type":"trafikolycka"
+  "location":{
+    "name":"town"
+    "gps":"00.000000, 00.000000"
+  },
+}
+```
+
+
+
+
+
+## 📬 Connect with me
+
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/alex-csore)
+
+
+---
