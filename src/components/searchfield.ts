@@ -1,7 +1,6 @@
 import "../sass/components/searchfield.scss";
-
+import { ifElementExistsAppend, formDiv } from "./constants";
 export function searchField(): HTMLInputElement {
-  const formDiv = document.querySelector(".formDiv") as HTMLDivElement;
   const searchField: HTMLInputElement = document.createElement(
     "input"
   ) as HTMLInputElement;
@@ -9,7 +8,7 @@ export function searchField(): HTMLInputElement {
   searchField?.setAttribute("type", "text");
 
   searchField.setAttribute("id", "searchField");
-  formDiv.appendChild(searchField);
 
+  ifElementExistsAppend(formDiv, searchField);
   return searchField as HTMLInputElement;
 }

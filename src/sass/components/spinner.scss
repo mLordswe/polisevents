@@ -1,0 +1,14 @@
+#spinner-div {
+  height: 15px;
+  width: 15px;
+  border: 5px solid blue;
+  border-left: 5px solid red;
+  border-right: 5px solid red;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

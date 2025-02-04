@@ -6,14 +6,14 @@
 header {
   background-color: colors.$primary;
   margin: 0;
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
   height: 15vh;
   width: 100%;
   //flex
   @include flex-start;
   flex-direction: row;
-  gap: max(25%);
+  gap: max(10%);
   flex-wrap: wrap;
   @media screen and (max-width: 710px) {
     gap: 0;
@@ -21,8 +21,10 @@ header {
   }
 }
 header h1 {
+  display: inline-block;
   margin-bottom: 1rem;
   padding: 1rem;
+  height: 1rem;
   text-align: center;
   margin-left: 1rem;
   justify-content: center;

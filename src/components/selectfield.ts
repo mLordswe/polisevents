@@ -1,3 +1,9 @@
+import {
+  formDiv,
+  selectDiv,
+  ifElementExistsAppend, // useage ifElementExistsAppend(parent, child) kollar om parent finns och appendar child
+  selectField,
+} from "./constants";
 export const options = {
   //dynamiskt ifall polisen skulle ändra sina endpoints
   platser: "locationname=",
@@ -6,15 +12,13 @@ export const options = {
 };
 
 export const selectButtons = () => {
-  const formDiv = document.querySelector(".formDiv") as HTMLDivElement;
-
-  const selectDiv = document.createElement("div") as HTMLDivElement;
   selectDiv.className = "selectDiv";
-  formDiv.appendChild(selectDiv);
-  const selectField = document.createElement("select") as HTMLSelectElement;
+
   selectField.className = "selectField";
 
-  selectDiv.appendChild(selectField);
+  ifElementExistsAppend(formDiv, selectDiv);
+  ifElementExistsAppend(selectDiv, selectField);
+
   for (const key in options) {
     const option = document.createElement("option") as HTMLOptionElement;
     option.value = options[key as keyof typeof options];
