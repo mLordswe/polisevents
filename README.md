@@ -1,7 +1,6 @@
-# Projektets Namn
+# Polis-events
 
-En kort beskrivning av projektet och dess syfte.
-
+En simpel sida där man kan kolla upp polisens senaste händelser genom att söka på en stad/tid/händelse
 ## 📂 Projektstruktur
 ```bash
 .
